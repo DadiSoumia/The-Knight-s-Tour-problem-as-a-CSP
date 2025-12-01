@@ -19,9 +19,7 @@ def successor_fct(current_x, current_y, visited):
 
 
 def count_onward_moves(x, y, visited):
-    """
-    Compte combien de mouvements sont possibles depuis (x, y)
-    """
+   
     knight_moves = [
         (2, 1), (1, 2), (-1, 2), (-2, 1),
         (-2, -1), (-1, -2), (1, -2), (2, -1)
@@ -95,8 +93,9 @@ def backtracking(assignment):
     
     successors = MRV(successors, visited)
     
-    # Si plusieurs successeurs ont le même score MRV
-    min_score = count_onward_moves(successors[0][0], successors[0][1], visited)
+
+    
+    min_score = count_onward_moves(successors[0][0], successors[0][1], visited)  
     equal_MRV = [pos for pos in successors if count_onward_moves(pos[0], pos[1], visited) == min_score]
 
 

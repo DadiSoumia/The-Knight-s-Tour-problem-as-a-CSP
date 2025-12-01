@@ -225,6 +225,8 @@ def grid_page():
         best_knight = type('Obj', (object,), {})()
         best_knight.path = [(r, c, str(i+1)) for i, (r, c) in enumerate(sol)]
         solution_ready = True
+    
+
 
     # Lancer le thread
     threading.Thread(target=compute_solution, daemon=True).start()
